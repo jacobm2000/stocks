@@ -18,13 +18,13 @@ def getPrice(x):
         s=BeautifulSoup(price.text,'html.parser')
         s.find('bg-quote')
         price=s
-        rstr+=("company Name: " +company)
+       
         #Get rid of the dollar sign and the extra lines by replacing and spliting
         price=str(price).replace("$","").splitlines()[2]
-        rstr+=("\nPrice: " +price)
-        return rstr
+       
+        return "Company: "+str(company),"Price: " +str(price)
     except:
-        return("Could not find that symbol")
+        return("Could not find that symbol"),""
 
 
 

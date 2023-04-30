@@ -3,12 +3,13 @@
 Home Page
 {% endblock %}
  {% block content %}
-<form action="#" method="post">
-    <p>Symbol</p>
-    <p><input type= "text" name="t"/></p>
-    <p><input type ="submit" value="submit"/></p>
+<form action="#" method="post" class="form">
+    
+    <p><input type= "text" id="input" name="t" placeholder="Symbol"/></p>
+    <p><input type ="submit"id="getP" value="Get Price"/></p>
 </form>
-<p>{{output}}</p>
+<p id="out"> {{output}}</p>
+<p id="out"> {{price}}</p>
  
  {% endblock %}
 

@@ -7,8 +7,8 @@ app=Flask(__name__)
 
 def home() :
     if request.method=="POST":
-        output=(getPrice( str(request.form["t"])))
-        return render_template("home.html", output=output)
+        output,price=(getPrice( str(request.form["t"])))
+        return render_template("home.html", output=output,price=price)
     else:
         return render_template("home.html")
 
